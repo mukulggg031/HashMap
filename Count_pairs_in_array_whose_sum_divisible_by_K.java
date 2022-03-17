@@ -33,3 +33,27 @@ public class Count_pairs_in_array_whose_sum_divisible_by_K {
         return sum;
     }
 }
+
+------------------------------Or-------------------------------------------------
+    public static int countKdivPairs(int arr[], int n, int k){
+        //code here
+        if(arr.length == 1){
+            return 1;
+        }
+        int[] freq = new int[k];
+        for(int i = 0 ; i < n ; i++){
+            int rem = arr[i] % k;
+            freq[rem]++;
+        }
+        int sum = 0;
+        for (int i = 1; i <= k / 2 ; i++){
+            if(i != (k - i)){
+                sum += (freq[i] * freq[k - i]);
+            }
+            else{
+                sum += (freq[i] * (freq[i] - 1)) / 2;
+            }
+        }
+        sum += (freq[0] * (freq[0] - 1)) / 2;
+        return sum;
+    }
