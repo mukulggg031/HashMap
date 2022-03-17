@@ -1,4 +1,4 @@
-//https://www.geeksforgeeks.org/count-subarrays-equal-number-1s-0s/
+//https://www.pepcoding.com/resources/data-structures-and-algorithms-in-java-levelup/hashmap-and-heaps/longest-subarray-with-equal-number-of-zeroes-and-ones-official/ojquestion
 
 // 1. You are given an array that contains only 0s and 1s.
 // 2. You have to find length of the longest subarray with equal number of 0s and 1s.
